@@ -1,0 +1,466 @@
+Practical No. : 01
+Aim :- Observe, Identify and Know the Use of Network Components in Computer Network Lab
+Solution : - 
+Computer networks components comprise both physical parts as well as the software required for installing computer networks, both at organizations and at home. The hardware components are the server, client, peer, transmission medium, and connecting devices. The software components are operating system and protocols.
+The following figure shows a network along with its components −
+ 
+Hardware Components
+•	Servers −Servers are high-configuration computers that manage the resources of the network. The network operating system is typically installed in the server and so they give user accesses to the network resources. Servers can be of various kinds: file servers, database servers, print servers etc.
+•	Clients − Clients are computers that request and receive service from the servers to access and use the network resources.
+•	Peers − Peers are computers that provide as well as receive services from other peers in a workgroup network.
+•	Transmission Media − Transmission media are the channels through which data is transferred from one device to another in a network. Transmission media may be guided media like coaxial cable, fibre optic cables etc; or maybe unguided media like microwaves, infra-red waves etc.
+•	Connecting Devices − Connecting devices act as middleware between networks or computers, by binding the network media together. Some of the common connecting devices are:
+             a. Routers
+             b. Bridges
+             c. Hubs
+             d. Repeaters
+             e. Gateways
+              f. Switches 
+Software Components
+•	Networking Operating System − Network Operating Systems is typically installed in the server and facilitate workstations in a network to share files, database, applications, printers etc.
+•	Protocol Suite − A protocol is a rule or guideline followed by each computer for data communication. Protocol suite is a set of related protocols that are laid down for computer networks. The two popular protocol suites are −              
+o	a. OSI Model ( Open System Interconnections)
+o	 b. TCP / IP Model
+
+
+
+
+
+
+
+
+
+
+
+
+Practical No. : 02
+Aim :- Observe, Identify and Know the Use of Network Features. 
+
+Solution : - 
+Features of Computer Network
+A computer network is essentially a connection of two or more devices utilizing a channel in order to exchange information. A computer network allows you to quickly send and receive data to and from a computing device.
+There are some very important features of Computer Networks, and we will go over them one by one in detail:
+Features of Computer Network
+1. Scalability:
+Scalability refers to the ability to add new network components. The network must be scalable in order for us to expand it by adding more devices. However, it reduces the speed of the connection and the data transfer speed, which raises the possibilities of an error happening. A solution to this issue is using routing or switching devices.
+For example, if a network currently has 100 devices, ease of scalability would mean that we can add another 100 devices or more as and when required by not having to modify the existing network too much.
+2. Software and Hardware Sharing/Compatibility:
+We may put the apps on the main server, allowing the user to access the applications from a single location. As a result, we do not need to install the program on each system. Hardware sharing happens in a similar manner.
+A computer network should not require all computers in a computer network to utilise the same software and hardware; rather, it should allow for improved portability between diverse software and hardware configurations.
+3. Data and File Sharing:
+One of the reasons we use a computer network is to transfer data between different systems that are linked together via a transmission medium.
+This technique distributes private data, information, and files among numerous systems linked by guided (cables) or unguided (waves) transmission means.
+4. Performance:
+The response time of a computer network determines its performance. The time taken for sending and receiving data from one node (a computer in a computer network is sometimes referred to as a node) to another should be as short as possible.
+5. Backup:
+A central server must be established for the computer network, and this server must maintain a backup of all data exchanged across the network. And, in the event of a network outage, this central server aids in speedier recovery.
+Thus, retrieving a backup of lost data is simple and easy.
+6. Security:
+Security is one of the most important aspects of computer networks. As a result, a computer network should be secure so that data transmitted over the network is protected from unwanted access.
+Furthermore, the data supplied by the sending node should arrive exactly as it is at the receiving node, which implies there should be no data loss during transmission.
+Unauthorized users or hackers should not be able to access the data exchanged on the network.
+7. Reliability:
+Computer networks are dependable because they enable other methods for data and file exchange across computers in the event of hardware failure or connection issues.
+If a network failure occurs, data recovery should be as quick as possible.
+8. Communication Speed:
+Networks give a quick and easy means for a group of individuals to communicate with one another. Some of the benefits of networks include email messaging, IP telephony, video conferencing, and so on.
+9. Fault Tolerance:
+Fault Tolerance refers to the capacity to continue operating despite faults and to ensure zero loss of services.
+Assume your PC is linked to a wireless router, and this router connects to two additional routers, which in turn connect to the web server.
+Now, if you browse for a link or a website, but your wireless router loses its connection with one of the routers, then the wireless router will establish a new connection with the other router and submit the request to the web server.
+10. Quality of Service (QoS):
+Quality of Service is the capacity to set priorities and control data flow in order to prevent data loss, delay, and other issues.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Practical No. : 03
+Aim :- Observe, Identify and Know the Use of Transmission Media and Network Control devices.
+Solution : - 
+Classification Of Transmission Media:
+ 
+o	Guided Transmission Media
+o	UnGuided Transmission Media
+Guided Media
+It is defined as the physical medium through which the signals are transmitted. It is also known as Bounded media.
+Types Of Guided media:
+Twisted pair:
+Twisted pair is a physical media made up of a pair of cables twisted with each other. A twisted pair cable is cheap as compared to other transmission media. Installation of the twisted pair cable is easy, and it is a lightweight cable. The frequency range for twisted pair cable is from 0 to 3.5KHz.
+A twisted pair consists of two insulated copper wires arranged in a regular spiral pattern.
+
+The degree of reduction in noise interference is determined by the number of turns per foot. Increasing the number of turns per foot decreases noise interference.
+ 
+Types of Twisted pair:
+ 
+Unshielded Twisted Pair:
+An unshielded twisted pair is widely used in telecommunication. Following are the categories of the unshielded twisted pair cable:
+o	Category 1: Category 1 is used for telephone lines that have low-speed data.
+o	Category 2: It can support upto 4Mbps.
+o	Category 3: It can support upto 16Mbps.
+o	Category 4: It can support upto 20Mbps. Therefore, it can be used for long-distance communication.
+o	Category 5: It can support upto 200Mbps.
+Advantages Of Unshielded Twisted Pair:
+o	It is cheap.
+o	Installation of the unshielded twisted pair is easy.
+o	It can be used for high-speed LAN.
+Disadvantage:
+o	This cable can only be used for shorter distances because of attenuation.
+Shielded Twisted Pair
+A shielded twisted pair is a cable that contains the mesh surrounding the wire that allows the higher transmission rate.
+Characteristics Of Shielded Twisted Pair:
+o	The cost of the shielded twisted pair cable is not very high and not very low.
+o	An installation of STP is easy.
+o	It has higher capacity as compared to unshielded twisted pair cable.
+o	It has a higher attenuation.
+o	It is shielded that provides the higher data transmission rate.
+Disadvantages
+o	It is more expensive as compared to UTP and coaxial cable.
+o	It has a higher attenuation rate.
+________________________________________
+Coaxial Cable
+o	Coaxial cable is very commonly used transmission media, for example, TV wire is usually a coaxial cable.
+o	The name of the cable is coaxial as it contains two conductors parallel to each other.
+o	It has a higher frequency as compared to Twisted pair cable.
+o	The inner conductor of the coaxial cable is made up of copper, and the outer conductor is made up of copper mesh. The middle core is made up of non-conductive cover that separates the inner conductor from the outer conductor.
+o	The middle core is responsible for the data transferring whereas the copper mesh prevents from the EMI(Electromagnetic interference).
+ 
+Coaxial cable is of two types:
+1.	Baseband transmission: It is defined as the process of transmitting a single signal at high speed.
+2.	Broadband transmission: It is defined as the process of transmitting multiple signals simultaneously.
+Advantages Of Coaxial cable:
+o	The data can be transmitted at high speed.
+o	It has better shielding as compared to twisted pair cable.
+o	It provides higher bandwidth.
+Disadvantages Of Coaxial cable:
+o	It is more expensive as compared to twisted pair cable.
+o	If any fault occurs in the cable causes the failure in the entire network.
+________________________________________
+Fibre Optic
+o	Fibre optic cable is a cable that uses electrical signals for communication.
+o	Fibre optic is a cable that holds the optical fibres coated in plastic that are used to send the data by pulses of light.
+o	The plastic coating protects the optical fibres from heat, cold, electromagnetic interference from other types of wiring.
+o	Fibre optics provide faster data transmission than copper wires.
+Diagrammatic representation of fibre optic cable:
+ 
+Basic elements of Fibre optic cable:
+o	Core: The optical fibre consists of a narrow strand of glass or plastic known as a core. A core is a light transmission area of the fibre. The more the area of the core, the more light will be transmitted into the fibre.
+o	Cladding: The concentric layer of glass is known as cladding. The main functionality of the cladding is to provide the lower refractive index at the core interface as to cause the reflection within the core so that the light waves are transmitted through the fibre.
+o	Jacket: The protective coating consisting of plastic is known as a jacket. The main purpose of a jacket is to preserve the fibre strength, absorb shock and extra fibre protection.
+Following are the advantages of fibre optic cable over copper:
+o	Greater Bandwidth: The fibre optic cable provides more bandwidth as compared copper. Therefore, the fibre optic carries more data as compared to copper cable.
+o	Faster speed: Fibre optic cable carries the data in the form of light. This allows the fibre optic cable to carry the signals at a higher speed.
+o	Longer distances: The fibre optic cable carries the data at a longer distance as compared to copper cable.
+o	Better reliability: The fibre optic cable is more reliable than the copper cable as it is immune to any temperature changes while it can cause obstruct in the connectivity of copper cable.
+o	Thinner and Sturdier: Fibre optic cable is thinner and lighter in weight so it can withstand more pull pressure than copper cable.
+UnGuided Transmission
+o	An unguided transmission transmits the electromagnetic waves without using any physical medium. Therefore it is also known as wireless transmission.
+o	In unguided media, air is the media through which the electromagnetic energy can flow easily.
+Unguided transmission is broadly classified into three categories:
+Radio waves
+o	Radio waves are the electromagnetic waves that are transmitted in all the directions of free space.
+o	Radio waves are omnidirectional, i.e., the signals are propagated in all the directions.
+o	The range in frequencies of radio waves is from 3Khz to 1 khz.
+o	In the case of radio waves, the sending and receiving antenna are not aligned, i.e., the wave sent by the sending antenna can be received by any receiving antenna.
+o	An example of the radio wave is FM radio.
+ 
+Applications Of Radio waves:
+o	A Radio wave is useful for multicasting when there is one sender and many receivers.
+o	An FM radio, television, cordless phones are examples of a radio wave.
+Advantages Of Radio transmission:
+o	Radio transmission is mainly used for wide area networks and mobile cellular phones.
+o	Radio waves cover a large area, and they can penetrate the walls.
+o	Radio transmission provides a higher transmission rate.
+
+Microwaves
+ 
+Microwaves are of two types:
+o	Terrestrial microwave
+o	Satellite microwave communication.
+Terrestrial Microwave Transmission
+o	Terrestrial Microwave transmission is a technology that transmits the focused beam of a radio signal from one ground-based microwave transmission antenna to another.
+o	Microwaves are the electromagnetic waves having the frequency in the range from 1GHz to 1000 GHz.
+o	Microwaves are unidirectional as the sending and receiving antenna is to be aligned, i.e., the waves sent by the sending antenna are narrowly focussed.
+o	In this case, antennas are mounted on the towers to send a beam to another antenna which is km away.
+o	It works on the line of sight transmission, i.e., the antennas mounted on the towers are the direct sight of each other.
+Characteristics of Microwave:
+o	Frequency range: The frequency range of terrestrial microwave is from 4-6 GHz to 21-23 GHz.
+o	Bandwidth: It supports the bandwidth from 1 to 10 Mbps.
+o	Short distance: It is inexpensive for short distance.
+o	Long distance: It is expensive as it requires a higher tower for a longer distance.
+o	Attenuation: Attenuation means loss of signal. It is affected by environmental conditions and antenna size.
+Advantages Of Microwave:
+o	Microwave transmission is cheaper than using cables.
+o	It is free from land acquisition as it does not require any land for the installation of cables.
+o	Microwave transmission provides an easy communication in terrains as the installation of cable in terrain is quite a difficult task.
+o	Communication over oceans can be achieved by using microwave transmission.
+Disadvantages of Microwave transmission:
+o	Eavesdropping: An eavesdropping creates insecure communication. Any malicious user can catch the signal in the air by using its own antenna.
+o	Out of phase signal: A signal can be moved out of phase by using microwave transmission.
+o	Susceptible to weather condition: A microwave transmission is susceptible to weather condition. This means that any environmental change such as rain, wind can distort the signal.
+o	Bandwidth limited: Allocation of bandwidth is limited in the case of microwave transmission.
+Satellite Microwave Communication
+o	A satellite is a physical object that revolves around the earth at a known height.
+o	Satellite communication is more reliable nowadays as it offers more flexibility than cable and fibre optic systems.
+o	We can communicate with any point on the globe by using satellite communication.
+How Does Satellite work?
+The satellite accepts the signal that is transmitted from the earth station, and it amplifies the signal. The amplified signal is retransmitted to another earth station.
+Advantages Of Satellite Microwave Communication:
+o	The coverage area of a satellite microwave is more than the terrestrial microwave.
+o	The transmission cost of the satellite is independent of the distance from the centre of the coverage area.
+o	Satellite communication is used in mobile and wireless communication applications.
+o	It is easy to install.
+o	It is used in a wide variety of applications such as weather forecasting, radio/TV signal broadcasting, mobile communication, etc.
+Disadvantages Of Satellite Microwave Communication:
+o	Satellite designing and development requires more time and higher cost.
+o	The Satellite needs to be monitored and controlled on regular periods so that it remains in orbit.
+o	The life of the satellite is about 12-15 years. Due to this reason, another launch of the satellite has to be planned before it becomes non-functional.
+________________________________________
+Infrared
+o	An infrared transmission is a wireless technology used for communication over short ranges.
+o	The frequency of the infrared in the range from 300 GHz to 400 THz.
+o	It is used for short-range communication such as data transfer between two cell phones, TV remote operation, data transfer between a computer and cell phone resides in the same closed area.
+Characteristics Of Infrared:
+o	It supports high bandwidth, and hence the data rate will be very high.
+o	Infrared waves cannot penetrate the walls. Therefore, the infrared communication in one room cannot be interrupted by the nearby rooms.
+o	An infrared communication provides better security with minimum interference.
+o	Infrared communication is unreliable outside the building because the sun rays will interfere with the infrared waves.
+
+
+
+
+
+
+
+
+
+Practical No. : 04
+Aim :- Connect Computers in Star Topology using Wired Media and any Network control Device
+Solution : - 
+What is Star Topology?
+A star topology, sometimes known as a star network, is a network topology in which each device is connected to a central hub. It is one of the most prevalent computer network configurations, and it's by far the most popular Network Topology. In this network arrangement, all devices linked to a central network device are displayed as a star.
+Unlike Mesh topology, a device cannot provide communication directly between the devices in a star topology; it has to communicate with the help of a hub. The peripheral devices function as clients, while the central network device serves as a server. Depending on the kind of network card installed in each computer, the RJ-45 or coaxial cable is used in a star topology. Like a Bus Topology, establishing a computer network that employs star topology is very straightforward and easy.
+There are a lot of examples of star topology in real life also, and you can see Star Network Topology Examples in Airports, Hospitals, Banks, and Educational Institutes. A Switch can also be utilised as a central device instead of a Hub. Patch cables will be used to connect the client, servers, and another network to the central Hub. In star topology, all connected devices are completely dependent on the central device; the communication through the whole Computer Network fails if the central device gets any problem.
+ 
+The above image is an example of star topology that will help you to make understand clearly about star topology. You can see Hub is a central device through which all other nodes (Clients, Servers, and other Networks) are connected. Each node in this diagram has a direct point-to-point link to the central device, yet no single node can communicate directly with the others. Therefore, before reaching the destination, each message has to pass through this central device (Hub or Switch).
+00:00/02:28
+Star topology can either be active or passive on the basis of the following, which are given below:
+o	If the data transit is actively controlled by the network.
+o	If the electrical power sources are required by the network.
+o	If the processes like data amplification or regeneration are performed by the central node.
+Furthermore, the wireless router, Ethernet/cabled structures, and other components can also be used to implement star topologies.
+Applications of Star Topology
+In networking, star topology can be used a variety of places. You can find its uses all around yourself due to its easy availability and cheap Star Topology Equipment. However, some uses of star topology are as follows:
+o	Most computer labs in educational institutions utilise this design to connect nodes in the lab.
+o	Our home networks are clearly configured in this Network Topology.
+o	Another use of star topology is the banking sector, where all banking users are connected with each other with the help of this Type of Topology.
+Characteristics of Star Topology
+The features or characteristics of star topology are as follows:
+o	The easy-to-install star topology may be employed in practically any sort of computer network, whether small, medium, or big.
+o	As compared to bus topology, star topology needs more cable. Also, in this type of connected network, there is no dependency.
+o	In star topology, to extend the entire network, you can use the daisy chain arrangement.
+o	As compared to other kinds of topological structures, the structure of star topology is more secure in terms of losing data.
+o	It offers an advantage; the whole network does not disturb if you remove or connect devices.
+
+
+
+Practical No. : 05
+Aim :- Sharing Printers and Folders in a Network 
+
+Solution : - 
+Share a folder, drive, or printer
+Once File and Printer Sharing is installed, to share a folder or drive:
+1.	Right-click the folder or drive you want to share.
+2.	Click Properties. From the Sharing tab, click Advanced Sharing.
+3.	Click Share this folder.
+4.	In the appropriate fields, type the name of the share (as it appears to other computers), the maximum number of simultaneous users, and any comments that should appear beside it.
+5.	If you would like to grant access to particular groups or individuals, click Permissions to add the appropriate groups or usernames.
+6.	If you are using NTFS, check the permissions in the Security tab to ensure that they are properly set to allow access to the share. Because Security settings override Share permissions, it is possible for people on the Permissions list to be denied access to the share because they either are not specified or are denied specifically in the Security list.
+Note:
+FAT32 does not provide the same level of security as NTFS; if you're using FAT32, you will not see the Security tab.
+7.	Click OK.
+To share a printer:
+1.	From the Control Panel, open Devices and Printers.
+2.	Right-click the printer you want to share. Click Printer Properties, and then select the Sharing tab.
+3.	Check Share this Printer. Under Share name, select a shared name to identify the printer. Click OK.
+Access a shared folder or printer
+To find and access a shared folder or printer:
+1.	Search for Network, and click to open it.
+2.	Select Search Active Directory at the top of the window; you may need to first select the Network tab on the upper left.
+3.	From the drop-down menu next to "Find:", select either Printers or Shared Folders.
+4.	You can now enter search terms in the appropriate fields to modify the search; to start the search, click Find Now. To search for shared printers and folders that match any criteria, click Find Now without entering any search terms.
+5.	You will see a list of shared printers and folders that are available on the network. Double-click the item to which you want to connect.
+If you know the exact name of the computer and the share, or the exact name of the printer, you can enter it directly:
+1.	Navigate to a search field. Enter two backslashes, the name of the computer, another backslash, and then the name of the share or printer. For example, if the name of the computer is bl-iub-threepio.ads.iu.edu and the name of the share is r2d2, type:
+   \\bl-iub-threepio.ads.iu.edu\r2d2
+2.	Click OK.
+If you need to repeatedly access a shared folder or network drive, you can map to it. Mapping creates a persistent link to the share, allowing you to double-click its icon in My Computer whenever you want access.
+
+
+
+
+
+
+
+
+
+
+
+
+Practical No. : 06
+Aim :- Installing Wireshark software and configure it to capture Ethernet packet
+Solution : - 
+Step 1: Install and open WireShark
+ 
+Step 2: Go to Capture tab and select Interface option
+ 
+
+Step 3: In Capture interface, Select Local Area Connection and click on start.
+ 
+ 
+Step 4: The source, Destination and protocols of the packets in the LAN network are displayed.
+ 
+We can see the data is recording.
+
+ 
+Step 6: Enter the credentials and then sign in.
+Step 7: Select filter as http.request.method==”POST” to make the search easier and click on apply.
+ 
+
+Step 8: Now stop the tool to stop recording.
+ 
+ 
+Step 9: Find the post methods for username and passwords.
+ 
+
+
+Step 10: U will see the email- id and password that you used to log in.
+
+ 
+Step 11: Now open Cmd and Type command (ftp ftp.mcafee.com) It will ask to enter the user id and password
+Enter default data and press enter
+
+
+
+Step 12: Apply filter ftp and see the packet
+
+ 
+Step 13:Now right click on it and click follow tcp stream.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Practical No. : 07
+Aim :- Working with network simulators (Cisco Packet Tracer) 
+
+Solution : - 
+Cisco Packet Tracer is Cisco's simulation software. It can be used to create complicated network typologies, as well as to test and simulate abstract networking concepts. It acts as a playground for you to explore networking and the experience is very close to what you see in computer networks.
+They also provide their service in languages such as Russian, German, Spanish and French. Packet Tracer enables students to create complicated and huge networks, which is frequently impossible with physical hardware due to cost considerations. Packet Tracer is available for Linux, Windows, MacOS, Android, and iOS.
+Packet Tracer allows users to drag and drop routers, switches, and other network devices to create simulated network topologies. If you have a Netacad account, you can download it for free.
+The best way to learn about networking, according to Cisco, is to do it. This programme cannot replace hardware routers or switches because the protocols are implemented solely in software. This tool, however, does not just contain Cisco hardware but also a wide range of other networking devices.
+Features of Cisco Packet Tracer
+•	Cisco Packet Tracer supports a multi-user system that allows many users to connect various topologies across a computer network. Instructors can also build exercises for students to perform using Packet Tracer.
+•	Supports feature expansion via additional programmes that use an API to improve Cisco Packet Tracer's capabilities in areas including curriculum and assessment delivery, gaming, accessibility, and interacting with real-world equipment.
+•	The Enhanced Physical Mode transports you to a virtual lab where you can simulate cabling devices on a rack. Refresh key skills such as device placement (Rack & Stack), on-device power switching, device port-to-port cabling (including cable selection and management), troubleshooting, and more.
+•	It can be downloaded for free through a Netacad account.
+•	It enables its users to simulate the configuration relating to the Cisco routers and can be accessed anywhere anytime.
+•	The Network Controller allows you a centralised dashboard to see the network's state, instantly discover and diagnose issues, and push configuration changes to all managed devices at once, whether you use its Web GUI or its APIs. You may also use real-world programmes on your computer to access the Network Controller and run your own infrastructure automation scripts.
+•	It can be accessed through unlimited devices.
+•	Provides an interactive and self-paced environment.
+ 
+ 
+
+
+
+
+
+
+
+Practical No. : 08
+Aim :- remote connectivity sessions (Team viewer, ammyyadmin , any desk etc..) 
+              and sharing of network resourses (Printer, fax etc..)
+Solution : - 
+What is TeamViewer?
+TeamViewer is a comprehensive remote access, remote control and remote support solution that works with almost every desktop and mobile platform, including Windows, macOS, Android, and iOS. TeamViewer lets you remote in to computers or mobile devices located anywhere in the world and use them as though you were there.
+Why is TeamViewer’s technology so special?
+Remote Support
+Deliver Instant Remote Support to Customers and Employees
+Tech mishaps happen. Computer glitches, system crashes, and device failures can bring business to a standstill. Instead of making on-site service calls that take time and increase costs, IT pros choose TeamViewer to provide instant remote support for their clients
+
+Remote Access
+Access Remote PCs, Mobiles, and Servers — or Work From Home
+Working from home. Away on business trips. With TeamViewer remote access tools, you can stay productive no matter where you are. Your desktop files and applications are just a few clicks away. Even mobile devices and servers can be securely accessed — all without VPN.
+
+Mobile Device Support
+Support Mobile and Commercial-Grade Devices — Anywhere, Anytime
+Need to access, manage, and support mobile devices, even when no one’s there? No problem just set up permanent unattended remote access to mobile devices, computers, and servers, or even IoT devices, point of sale (POS) machines, kiosks, or digital signage
+
+Remote Desktop
+Secure and fast connection. Whether at home or on the road.
+Remote Monitoring
+Central Remote Management. All from a single platform.
+Remote Support
+For Your Employees & Customers. As if you were right there.
+
+Share a folder, drive, or printer
+Once File and Printer Sharing is installed, to share a folder or drive:
+1.	Right-click the folder or drive you want to share.
+2.	Click Properties. From the Sharing tab, click Advanced Sharing.
+3.	Click Share this folder.
+4.	In the appropriate fields, type the name of the share (as it appears to other computers), the maximum number of simultaneous users, and any comments that should appear beside it.
+5.	If you would like to grant access to particular groups or individuals, click Permissions to add the appropriate groups or usernames.
+6.	If you are using NTFS, check the permissions in the Security tab to ensure that they are properly set to allow access to the share. Because Security settings override Share permissions, it is possible for people on the Permissions list to be denied access to the share because they either are not specified or are denied specifically in the Security list.
+Note:
+FAT32 does not provide the same level of security as NTFS; if you're using FAT32, you will not see the Security tab.
+7.	Click OK.
+To share a printer:
+1.	From the Control Panel, open Devices and Printers.
+2.	Right-click the printer you want to share. Click Printer Properties, and then select the Sharing tab.
+3.	Check Share this Printer. Under Share name, select a shared name to identify the printer. Click OK.
+Access a shared folder or printer
+To find and access a shared folder or printer:
+1.	Search for Network, and click to open it.
+2.	Select Search Active Directory at the top of the window; you may need to first select the Network tab on the upper left.
+3.	From the drop-down menu next to "Find:", select either Printers or Shared Folders.
+4.	You can now enter search terms in the appropriate fields to modify the search; to start the search, click Find Now. To search for shared printers and folders that match any criteria, click Find Now without entering any search terms.
+5.	You will see a list of shared printers and folders that are available on the network. Double-click the item to which you want to connect.
+If you know the exact name of the computer and the share, or the exact name of the printer, you can enter it directly:
+1.	Navigate to a search field. Enter two backslashes, the name of the computer, another backslash, and then the name of the share or printer. For example, if the name of the computer is bl-iub-threepio.ads.iu.edu and the name of the share is r2d2, type:
+   \\bl-iub-threepio.ads.iu.edu\r2d2
+2.	Click OK.
+If you need to repeatedly access a shared folder or network drive, you can map to it. Mapping creates a persistent link to the share, allowing you to double-click its icon in My Computer whenever you want access.
+
+
+
