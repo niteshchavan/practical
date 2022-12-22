@@ -1,0 +1,694 @@
+Practical No : 01
+Aim :-  DOS commands 
+
+
+
+Solution :- 
+DOS Internal Commands
+These DOS commands are called internal commands because their code is included in COMMAND.COM, the DOS and Windows 9x command processor. Since COMMAND.COM is loaded into primary memory when DOS or Windows 9x is booted, the internal commands are always in memory and can be executed at any time without first being fetched from disk (secondary memory).
+This is in contrast to the disk-bound external commands, which reside only in secondary memory until the moment they are commanded to launch. Then they are loaded into primary memory by the operating system, but only if it can find the program on disk.
+The syntax for some frequently used internal commands follows.
+TIME
+Displays current time and allows it to be changed.
+Syntax:
+TIME
+DATE
+Displays current date and allows it to be changed.
+Syntax:
+DATE
+CLS
+Clears the screen.
+Syntax:
+CLS
+DIR
+Shows directory information of a diskette: name, size, and the date and time stamp of files.
+Syntax:
+DIR [d:][path]
+Optional switches:
+/p Display dir info and pauses display when the screen is full
+/w Display names and extensions only in five columns
+
+To display a file directory listing for D:\DATA\LETTER\ANNUAL from different current directories:
+D:\DATA\LETTER\ANNUAL> DIR
+D:\DATA> DIR LETTER\ANNUAL
+C:\WINDOWS> DIR D:\DATA\LETTER\ANNUAL
+COPY
+Copies a file. Name of copy may be the same as original, or different. Syntax:
+COPY [d:][path][name.ext] [d:][path][name.ext]
+Optional switches:
+/v Verify, copies the file and compares it with the original
+/b Binary file
+
+To copy a file from D:\BATCH to the root of A: drive
+A:\> COPY D:\BATCH\CL.BAT (from A: drive)
+D:\BATCH> COPY CL.BAT A:\ (from D:\BATCH)
+To copy a file from the root of C: to A: drive and change its name
+A:\> COPY C:\MSDOS.SYS MSDOSSYS.BAK (from A:)
+C:\> COPY MSDOS.SYS A:\MSDOSSYS.BAK (from the root of C:)
+To copy all of the files from the root of A: to D:\CCV\ENGCOMP
+A:\> COPY *.* D:\CCV\ENGCOMP (from A:)
+D:\CCV\ENGCOMP> COPY *.* A:\ (from D:\CCV\ENGCOMP)
+TYPE
+Displays the contents of a file.
+Syntax:
+TYPE [d:][path][name.ext]
+
+To display the contents of the file MY.LET to the screen
+A:\> TYPE MY.LET
+DEL
+Deletes a file from disk.
+Syntax:
+DEL [d:][path][name.ext]
+
+To delete one file:
+A:\> DEL A:\MY.LET
+To del all files in current directory
+A:\> DEL *.*
+REN
+Renames a file.
+Syntax:
+REN [d:][path][name.ext] [d:][path][newname.ext]
+
+To change the name of the file D:\LET\ANNUAL\99.DOC to 1999.DOC
+D:\LET> REN ANNUAL\99.DOC 1999.DOC (from D:\LET)
+D:\DATA> REN \LET\ANNUAL\99.DOC 1999.DOC (from D:\DATA)
+C:\WINDOWS> REN D:\LET\ANNUAL\99.DOC 1999.DOC (from C:\WINDOWS)
+MD
+Makes (creates) a new directory.
+Syntax:
+MD [d:][path][dirname]
+
+To create a directory named HERMIT in the root of D: drive
+D:\> MD HERMIT (from D:\)
+C:\> MD D:\HERMIT (from C:\)
+RD
+Removes an existing directory (directory must be empty).
+Syntax:
+RD [d:][path][dirname]
+
+To remove the HERMIT sub-directory:
+D:\> RD HERMIT (from D:\)
+C:\> RD D:\HERMIT (from C:\)
+CD
+Changes the current directory.
+Syntax:
+CD [path][dirname]
+
+To make D:\HERMIT the current directory
+D:\> CD HERMIT (from D:\)
+D:\DATA> CD \HERMIT (from D:\DATA)
+D:\DATA\SOURCE> CD \HERMIT (from D:\DATA\SOURCE)
+D:\DATA\SOURCE> CD .. (from D:\DATA\SOURCE)
+PATH
+The PATH command is used to help the command interpreter find external commands which are not in the current directory. The command interpreter looks into the DOS environment for "PATH=" and then searches the paths (each separated from the next by a semicolon) that follow.
+Syntax:
+PATH=[path;path;...]
+
+To set the DOS PATH:
+PATH=C:\DOS;C:\PCW;\C:\BIN
+To display the current path:
+PATH
+
+Practical No : 02
+Aim :-  Batch file 
+
+
+
+Solution :- 
+Creating Batch Files
+Batch files are normally created in notepad. Hence the simplest way is to open notepad and enter the commands required for the script. For this exercise, open notepad and enter the following statements.
+:: Deletes All files in the Current Directory With Prompts and Warnings 
+::(Hidden, System, and Read-Only Files are Not Affected) 
+:: 
+@ECHO OFF 
+DEL . 
+DR
+Saving Batch Files
+After your batch file is created, the next step is to save your batch file. Batch files have the extension of either .bat or .cmd. Some general rules to keep in mind when naming batch files −
+•	Try to avoid spaces when naming batch files, it sometime creates issues when they are called from other scripts.
+•	Don’t name them after common batch files which are available in the system such as ping.cmd.
+ 
+The above screenshot shows how to save the batch file. When saving your batch file a few points to keep in mind.
+•	Remember to put the .bat or .cmd at the end of the file name.
+•	Choose the “Save as type” option as “All Files”.
+•	Put the entire file name in quotes “”.
+Executing Batch Files
+Following are the steps to execute a batch file −
+•	Step 1 − Open the command prompt (cmd.exe).
+•	Step 2 − Go to the location where the .bat or .cmd file is stored.
+•	Step 3 − Write the name of the file as shown in the following image and press the Enter button to execute the batch file.
+ 
+Modifying Batch Files
+Following are the steps for modifying an existing batch file.
+•	Step 1 − Open windows explorer.
+•	Step 2 − Go to the location where the .bat or .cmd file is stored.
+•	Step 3 − Right-click the file and choose the “Edit” option from the context menu. The file will open in Notepad for further editing.
+ 
+
+S.No	Commands & Description
+1	VER
+This batch command shows the version of MS-DOS you are using.
+2	ASSOC
+This is a batch command that associates an extension with a file type (FTYPE), displays existing associations, or deletes an association.
+3	CD
+This batch command helps in making changes to a different directory, or displays the current directory.
+4	CLS
+This batch command clears the screen.
+5	COPY
+This batch command is used for copying files from one location to the other.
+6	DEL
+This batch command deletes files and not directories.
+7	DIR
+This batch command lists the contents of a directory.
+8	DATE
+This batch command help to find the system date.
+9	ECHO
+This batch command displays messages, or turns command echoing on or off.
+10	EXIT
+This batch command exits the DOS console.
+11	MD
+This batch command creates a new directory in the current location.
+12	MOVE
+This batch command moves files or directories between directories.
+13	PATH
+This batch command displays or sets the path variable.
+14	PAUSE
+This batch command prompts the user and waits for a line of input to be entered.
+15	PROMPT
+This batch command can be used to change or reset the cmd.exe prompt.
+16	RD
+This batch command removes directories, but the directories need to be empty before they can be removed.
+17	REN
+Renames files and directories
+18	REM
+This batch command is used for remarks in batch files, preventing the content of the remark from being executed.
+19	START
+This batch command starts a program in new window, or opens a document.
+20	TIME
+This batch command sets or displays the time.
+21	TYPE
+This batch command prints the content of a file or files to the output.
+22	VOL
+This batch command displays the volume labels.
+23	ATTRIB
+Displays or sets the attributes of the files in the curret directory
+	
+24	CHKDSK
+This batch command checks the disk for any problems.
+25	CHOICE
+This batch command provides a list of options to the user.
+26	CMD
+This batch command invokes another instance of command prompt.
+27	COMP
+This batch command compares 2 files based on the file size.
+28	CONVERT
+This batch command converts a volume from FAT16 or FAT32 file system to NTFS file system.
+29	DRIVERQUERY
+This batch command shows all installed device drivers and their properties.
+30	EXPAND
+This batch command extracts files from compressed .cab cabinet files.
+31	FIND
+This batch command searches for a string in files or input, outputting matching lines.
+32	FORMAT
+This batch command formats a disk to use Windows-supported file system such as FAT, FAT32 or NTFS, thereby overwriting the previous content of the disk.
+33	HELP
+This batch command shows the list of Windows-supplied commands.
+34	IPCONFIG
+This batch command displays Windows IP Configuration. Shows configuration by connection and the name of that connection.
+35	LABEL
+This batch command adds, sets or removes a disk label.
+36	MORE
+This batch command displays the contents of a file or files, one screen at a time.
+37	NET
+Provides various network services, depending on the command used.
+38	PING
+This batch command sends ICMP/IP "echo" packets over the network to the designated address.
+39	SHUTDOWN
+This batch command shuts down a computer, or logs off the current user.
+40	SORT
+This batch command takes the input from a source file and sorts its contents alphabetically, from A to Z or Z to A. It prints the output on the console.
+41	SUBST
+This batch command assigns a drive letter to a local folder, displays current assignments, or removes an assignment.
+42	SYSTEMINFO
+This batch command shows configuration of a computer and its operating system.
+43	TASKKILL
+This batch command ends one or more tasks.
+44	TASKLIST
+This batch command lists tasks, including task name and process id (PID).
+45	XCOPY
+This batch command copies files and directories in a more advanced way.
+46	TREE
+This batch command displays a tree of all subdirectories of the current directory to any level of recursion or depth.
+47	FC
+This batch command lists the actual differences between two files.
+48	DISKPART
+This batch command shows and configures the properties of disk partitions.
+49	TITLE
+This batch command sets the title displayed in the console window.
+50	SET
+Displays the list of environment variables on the current system.
+
+
+Practical No : 03
+Aim :-  UNIX Commands 
+
+
+
+Solution :- 
+Unix / Linux - Useful Commands
+
+Files and Directories
+These commands allow you to create directories and handle files.
+Given below is the list of commands in Files and Directories.
+Manipulating data
+The contents of files can be compared and altered with the following commands.
+Given below is the list of commands in Manipulating data.
+Compressed Files
+Files may be compressed to save space. Compressed files can be created and examined.
+Sr.No.	Command & Description
+1	compress
+Compresses files
+2	gunzip
+Helps uncompress gzipped files
+3	gzip
+GNU alternative compression method
+4	uncompress
+Helps uncompress files
+Getting Information
+Various Unix manuals and documentation are available on-line. The following Shell commands give information −
+Sr.No.	Command & Description
+1	info
+Displays command information pages online
+2	man
+Displays manual pages online
+Network Communication
+These following commands are used to send and receive files from a local Unix hosts to the remote host around the world.
+Sr.No.	Command & Description
+1	ftp
+File transfer program
+2	rcp
+Remote file copy
+3	rlogin
+Remote login to a Unix host
+4	telnet
+Makes terminal connection to another host
+5	ssh
+Secures shell terminal or command connection
+Some of these commands may be restricted at your computer for security reasons.
+Messages between Users
+The Unix systems support on-screen messages to other users and world-wide electronic mail −
+Sr.No.	Command & Description
+1	mail
+Simple send or read mail program
+2	talk
+Talks to another user
+3	write
+Writes message to another user
+
+
+Practical No : 04
+Aim :-  File access permissions(Read/ Write/Execute/ chmodcommand ) 
+
+
+
+Solution :- 
+File access permissions(Read/ Write/Execute/ chmod command ) 
+
+we will discuss in detail about file permission and access modes in Unix. File ownership is an important component of Unix that provides a secure method for storing files. Every file in Unix has the following attributes −
+•	Owner permissions − The owner's permissions determine what actions the owner of the file can perform on the file.
+•	Group permissions − The group's permissions determine what actions a user, who is a member of the group that a file belongs to, can perform on the file.
+•	Other (world) permissions − The permissions for others indicate what action all other users can perform on the file.
+The Permission Indicators
+While using ls -l command, it displays various information related to file permission as follows −
+$ls -l /home/amrood
+-rwxr-xr--  1 amrood   users 1024  Nov 2 00:10  myfile
+drwxr-xr--- 1 amrood   users 1024  Nov 2 00:10  mydir
+Here, the first column represents different access modes, i.e., the permission associated with a file or a directory.
+The permissions are broken into groups of threes, and each position in the group denotes a specific permission, in this order: read (r), write (w), execute (x) −
+•	The first three characters (2-4) represent the permissions for the file's owner. For example, -rwxr-xr-- represents that the owner has read (r), write (w) and execute (x) permission.
+•	The second group of three characters (5-7) consists of the permissions for the group to which the file belongs. For example, -rwxr-xr-- represents that the group has read (r) and execute (x) permission, but no write permission.
+•	The last group of three characters (8-10) represents the permissions for everyone else. For example, -rwxr-xr-- represents that there is read (r) only permission.
+File Access Modes
+The permissions of a file are the first line of defense in the security of a Unix system. The basic building blocks of Unix permissions are the read, write, and execute permissions, which have been described below −
+Read
+Grants the capability to read, i.e., view the contents of the file.
+Write
+Grants the capability to modify, or remove the content of the file.
+Execute
+User with execute permissions can run a file as a program.
+Directory Access Modes
+Directory access modes are listed and organized in the same manner as any other file. There are a few differences that need to be mentioned −
+Read
+Access to a directory means that the user can read the contents. The user can look at the filenames inside the directory.
+Write
+Access means that the user can add or delete files from the directory.
+Execute
+Executing a directory doesn't really make sense, so think of this as a traverse permission.
+A user must have execute access to the bin directory in order to execute the ls or the cd command.
+Changing Permissions
+To change the file or the directory permissions, you use the chmod (change mode) command. There are two ways to use chmod — the symbolic mode and the absolute mode.
+Using chmod in Symbolic Mode
+The easiest way for a beginner to modify file or directory permissions is to use the symbolic mode. With symbolic permissions you can add, delete, or specify the permission set you want by using the operators in the following table.
+Sr.No.	Chmod operator & Description
+1	+
+Adds the designated permission(s) to a file or directory.
+2	-
+Removes the designated permission(s) from a file or directory.
+3	=
+Sets the designated permission(s).
+Using chmod with Absolute Permissions
+The second way to modify permissions with the chmod command is to use a number to specify each set of permissions for the file.
+Each permission is assigned a value, as the following table shows, and the total of each set of permissions provides a number for that set.
+Number	Octal Permission Representation	Ref
+0	No permission	---
+1	Execute permission	--x
+2	Write permission	-w-
+3	Execute and write permission: 1 (execute) + 2 (write) = 3	-wx
+4	Read permission	r--
+5	Read and execute permission: 4 (read) + 1 (execute) = 5	r-x
+6	Read and write permission: 4 (read) + 2 (write) = 6	rw-
+7	All permissions: 4 (read) + 2 (write) + 1 (execute) = 7	rwx
+
+
+Practical No : 05
+Aim :-  
+File processing commands(CAT/ join/sort/paste/compare/word count 
+/grep command ) 
+
+
+
+Solution :- 
+CAT
+Cat(concatenate) command is very frequently used in Linux. It reads data from the file and gives their content as output. It helps us to create, view, concatenate files. So let us see some frequently used cat commands. 
+1) To view a single file 
+Command: 
+ 
+$cat filename
+
+Output 
+ 
+It will show content of given filename
+
+2) To view multiple files 
+Command: 
+ 
+$cat file1 file2
+
+ Grep, Egrep, Fgrep, Rgrep Commands
+These filters output lines matching a given pattern. They read lines from a file or standard input, and print all matching lines by default to standard output.
+Note: The main program is grep, the variations are simply the same as using specific grep options as below (and they are still being used for backward compatibility):
+$ egrep = grep -E
+$ fgrep = grep -F
+$ rgrep = grep -r  
+Below are some basic grep commands:
+tecmint@TecMint ~ $ grep "aaronkilik" /etc/passwd
+aaronkilik:x:1001:1001::/home/aaronkilik:
+
+tecmint@TecMint ~ $ cat /etc/passwd | grep "aronkilik"
+aaronkilik:x:1001:1001::/home/aaronkilik:
+sort Command
+sort is used to sort lines of a text file or from standard input.
+Below is the content of a file named domains.list:
+tecmint@TecMint ~ $ cat domains.list
+tecmint.com
+tecmint.com
+news.tecmint.com
+news.tecmint.com
+linuxsay.com
+linuxsay.com
+windowsmint.com
+windowsmint.com
+You can run a simple sort command to sort the file content like so:
+tecmint@TecMint ~ $ sort domains.list
+linuxsay.com
+linuxsay.com
+news.tecmint.com
+news.tecmint.com
+tecmint.com
+tecmint.com
+windowsmint.com
+windowsmint.com
+
+
+
+Practical No : 06
+Aim :-  File / folder sharing in windows 
+
+
+
+Solution :- 
+Windows
+Here’s how to share a folder on your Windows machine:
+1.	Right-click on the folder you want to share.
+2.	Select Give Access to > Specific people.
+3.	From there, you can choose specific users and their permission level (whether they can read-only or read/write). After making your selection, click Share.
+4.	If a user doesn’t appear on the list, type their name into the taskbar and hit Add. You can also share with Everyone.
+5.	Click Share.
+If you’re in File Explorer, you can also click the Share tab and select users through the same process listed above.
+To access your shared folder on other computers on your network, simply look for your computer’s name in the Network section on your other machine. When you choose it, you’ll have a new option to connect to this folder.
+
+
+	Windows Control panel 
+
+
+
+	Demonstration of Task Manager 
+
+
+
+
+	Demonstration of computer manage tool 
+
+
+
+
+Practical No : 07
+Aim :-  Windows Control panel 
+
+
+
+Solution :- 
+The Control Panel is a component of Microsoft Windows that provides the ability to view and change system settings. It consists of a set of applets that include adding or removing hardware and software, controlling user accounts, changing accessibility options, and accessing networking settings. Additional applets are provided by third parties, such as audio and video drivers, VPN tools, input devices, and networking tools.
+The Control Panel has been part of Microsoft Windows since Windows 1.0,with each successive version introducing new applets. Beginning with Windows 95, the Control Panel is implemented as a special folder, i.e. the folder does not physically exist, but only contains shortcuts to various applets such as Add or Remove Programs and Internet Options. Physically, these applets are stored as .cpl files. For example, the Add or Remove Programs applet is stored under the name appwiz.cpl in the SYSTEM32 folder.
+In Windows XP, the Control Panel home screen was changed to present a categorized navigation structure reminiscent of navigating a web page. Users can switch between this Category View and the grid-based Classic View through an option that appears on either the left side or top of the window. In Windows Vista and Windows 7, additional layers of navigation were introduced, and the Control Panel window itself became the main interface for editing settings, as opposed to launching separate dialogs.
+Many of the individual Control Panel applets can be accessed in other ways. For instance, Display Properties can be accessed by right-clicking on an empty area of the desktop and choosing Properties. The Control Panel can be accessed from a command prompt by typing control; optional parameters are available to open specific control panels.
+On Windows 10, Control Panel is deprecated in favor of Settings app, which was originally introduced on Windows 8 as "PC settings" to provide a touchscreen-optimized settings area using its Metro-style app platform. Some functions, particularly the ability to add and remove user accounts, were moved exclusively to this app on Windows 8 and cannot be performed from Control Panel.
+As of the October 2020 update to Windows 10 trying to open the System page of Control Panel will redirect users to the Windows 10 Settings application.
+Accessibility options (Access.cpl) (control /name microsoft.easeofaccesscenter)
+(Renamed "Ease of Access Center" in Windows Vista and later)
+Allows users to configure the accessibility of their PC. It comprises various settings primarily aimed at users with disabilities or hardware problems.
+•	The behavior of the keyboard can be modified, this is aimed at people who have difficulty pressing key-combinations, or pressing a key just once. (StickyKeys, FilterKeys and ToggleKeys)
+•	Behavior of sounds can be modified. (SoundSentry and ShowSounds)
+•	High contrast mode can be activated.
+•	The keyboard cursor can be customized.
+•	The pointer can be controlled using the keyboard. (MouseKeys)
+Note that in the next generation of Windows, the Ease of Access control panel superseded the simple access.cpl control panel in previous versions.
+
+Add New Hardware (hdwwiz.cpl)
+Launches a wizard which allows users to add new hardware devices to the system. This can be done by selecting from a list of devices or by specifying the location of the driver installation files.
+
+Add or Remove Programs (appwiz.cpl)
+(Renamed "Programs and Features" in Windows Vista and later)
+The Add/Remove Programs dialog allows the user to manipulate software installed on the system in a number of ways;
+•	Allows users to uninstall and change existing software packages, as well as indicating how much space individual programs take and how frequently they are used.
+•	Allows users to manually install software from a CD-ROM or Floppy Disk, and install add-ons from Windows Update.
+•	Allows users to change which Windows components are installed, via the Windows setup Wizard, which includes Internet Explorer, Windows Media Player and Windows Messenger
+•	Finally, it allows users to specify the default applications for certain tasks, via the 'set program access and defaults' wizard, such as internet browsers, media players and email programs and whether access to these programs is available (since Windows 2000 Professional Service Pack 3 and Windows XP Service Pack 1)
+Administrative Tools (control admintools)
+Contains tools for system administration, including security, performance and service configuration. These are links to various configurations of the Microsoft Management Console such as the local services list and the Event Viewer.
+
+Automatic Updates (wuaucpl.cpl)
+This is used to specify how the Automatic Updates client (wuauclt.exe) should download updates from the Microsoft Update Website, by default this is set to download and install daily, however this can be changed to a more suitable frequency. This also allows the user to specify whether to ask permission before downloading and/or installing updates or to simply switch off Automatic Updates altogether. Removed in Windows 10
+
+Date and Time (timedate.cpl)
+Allows user to change the date and time stored in the machine's BIOS, change the time zone and specify whether to synchronize the date and time with an Internet Time Server and which server to use.
+
+Display (control desktop) (desk.cpl)
+(Renamed "Personalization" in Windows Vista, 7 and 8.1)
+Allows the user to change the display characteristics of their computer;
+•	Allows users to change the desktop background (wallpaper) to a picture of their choice and specifies how it should be shown.
+•	Allows the user to change or disable the screensaver, and specify how long it takes to activate and whether to ask for a password on resume
+•	Allows the user to specify the color styles of all elements within the system, primarily whether to use the Windows XP / Vista styles (blue by default in XP) or to use the classic Windows 98 / Me styles, this also allows the user to change the My Computer and Recycle Bin icons.
+•	Allows the user to change the screen resolution and colour quality, and provides trouble shooting advice for displays.
+
+Removed in Windows 10 and moved to Settings App.
+
+Folder Options (control folders) (rundll32.exe shell32.dll, Options_RunDLL 0)
+This item allows for configuration of how folders and files are presented in Windows Explorer. More specifically it allows the user to specify general settings like whether folders open in a new window or the existing window and whether the common tasks pane is shown, as well as more advanced tasks such as whether windows should hide critical system files and whether to show file extensions. It is also used to modify file type associations in Windows; i.e., which program opens which type of file and other settings like actions for each file type and the file extension.
+Fonts (control fonts)
+Displays all fonts installed on the computer. Users can remove fonts, install new fonts or search for fonts using font characteristics. Note that "explorer \Windows\Fonts" has the same effect. This still exists on Windows 10, but there is a similar page in Settings starting from Windows 10 April Update.
+
+Internet Options (inetcpl.cpl)
+Allows the user to change the way the computer manages internet connections and browser settings for Internet Explorer, it has several tags specifying different attributes;
+•	General – This specifies the homepage and color schemes and allows the user to delete internet usage history.
+•	Security & Privacy – These specify whether the computer should allow websites to undertake certain processes and download cookies, this panel also gives access to the inbuilt pop-up blocker (Windows XP SP2 and later) and the phishing controls (Internet Explorer 7).
+•	Content – Allows the parental controls and auto-complete to be configured and also specifies how to deal with certificates.
+•	Connections, Programs and Advanced – These give access to other aspects of internet settings such as the default modem connection and email client, proxy settings and other advanced configurations.
+
+Game controllers (joy.cpl) (control /name microsoft.gamecontrollers)
+Allows one to add, display, troubleshoot, and use advanced settings on joysticks and game controllers and connect to other type of game controllers.
+Moved to Settings app on Windows 10 Anniversary Update.
+Keyboard (control keyboard) (main.cpl)
+Lets the user change and test keyboard settings, including cursor blink rate and key repeat rate.
+Mail (mlcfg32.cpl) (mlcfg.cpl)
+Mail allows for configuration of the mail client in Windows. Microsoft Outlook Express cannot be configured with this item; it is configured through its own interface. mlcfg.cpl is used for 64 bit office applications first available with the Office 2010 release.
+Mouse (control mouse) (main.cpl)
+Mouse allows the configuration of pointer options, such as the double click and scroll speed, and includes visibility options such as whether to use pointer trails and whether the pointer should disappear when typing. This also allows the user to specify the pointer appearance for each task, such as resize and busy.
+
+Network Connections (control netconnections) (ncpa.cpl)
+Displays and allows the user to edit or create network connections such as Local Area Networks (LAN) and internet connections. It also offers troubleshooting functions in case the computer has to be reconnected to the network.
+Phone and Modem Options (telephon.cpl)
+Manages telephone and modem connections.
+
+Power Options (powercfg.cpl)
+Includes options to manage energy consumption such as;
+•	Specify how long it takes to switch off the display and hard drives and how long it takes for the system to enter standby, if at all.
+•	To decide what to do when the computer's on/off button is pressed, such as whether to shut down or to enter standby.
+•	Whether to allow Hibernation (some systems become unstable when restarting).
+•	Allows the user to configure UPS (if available).
+•	Since Windows Vista, additional hidden power options are available for fine tuning power features.
+Printers and Faxes (control printers) (control /name microsoft.devicesandprinters)
+Displays all the printers and faxes currently installed on the computer, and has two main uses;
+•	Firstly, it shows all the jobs queued for each printer, the file size and status of each job and which user they belong to, it also allows each job to be paused, canceled or moved up or down the list.
+•	Secondly, it allows the user to set the printing or faxing preferences, such as paper size and quality via the manufacturers own preferences pane and also specifies how to share the printer across a computer network, the device drivers, ports etc.
+
+Regional and Language Settings (intl.cpl) aka Regional and Language Options
+Various regional settings can be altered, for instance:
+•	The way numbers are displayed (e.g. decimal separator).
+•	How Currency values are displayed, including the currency symbol.
+•	Time and date notations, such as the date separator and whether the clock should be in 12 or 24 hours.
+•	Cultural location of the user's computer (The time zone is set in Date and Time).
+•	Language;
+o	Input language.
+o	Keyboard layout (mapping between key strokes and characters).
+o	Display language for Menus and Dialog Boxes.
+•	Whether files necessary for Asiatic language support must be installed.
+•	Installed code pages.
+Removed in Windows 10 April Update
+Security Center or Action Center (Windows 7 & 8.x) (wscui.cpl)
+Renamed "Security & Maintenance" in Windows 10
+First added in Windows XP with Service Pack 2, Security Center gives the user access to the inbuilt Windows security components, as well as providing information about any existing antivirus software such as McAfee or Zone Alarm. It includes access to Windows Update, where users can specify whether the computer should check for updates regularly (also available through the Windows Update panel), and options for managing internet security settings. It also includes links to internet articles about PC security and current virus threats and notifies the user when the PC's security is compromised.
+
+Sounds and Audio Devices (mmsys.cpl)
+This panel contains various audio-related functions;
+•	Change the speaker volume and type and specify whether to show the volume icon in the notification area.
+•	Change the sounds played for the system or specific programs when a certain event occurs, i.e. Windows Startup or Critical Stop.
+•	Change default devices for music playback, recording, voice recognition, MIDI etc.
+•	Change the Sound card settings and whether to use Hardware acceleration.
+•	Display the audio devices installed on the computer, and allows them to be configured.
+Speech (Sapi.cpl)
+This applet has two main functions, the first is specify settings for Speech synthesis, allowing the user to select the voice the computer should use to narrate text and how fast it should read. The second is to specify settings for Speech recognition, allowing the user to set up different profiles detailing how the computer should deal with an individual's dialect, for instance;
+•	The amount of grammatical errors in a person's voice (punctuality sensitivity).
+•	The speed at which the person speaks, and the time delay between words.
+This also allows the user to access the voice recognition training wizard, in which an individual 'teaches' the computer to recognize a person voice interactively using the microphone.
+System (Sysdm.cpl)
+This is used to view and change core system settings, a user can for instance:
+•	Display general information on the user's machine such as the amount of RAM, CPU speed and type, the version of Windows the system is using and the manufacturer.
+•	Edit the computer name in a network workgroup.
+•	Manage and Configure hardware devices, and view information such as the manufacturer, user access and driver version of any hardware device installed on the system via Device Manager.
+•	Enable/Disable system features such as automatic updates and System restore monitoring.
+•	Specify advanced features such as performance logs, virtual memory settings and roaming profiles.
+Moved to Settings App on Windows 10, but the shortcut still exists. Clicking on it goes to Settings App.
+
+Taskbar and Start Menu (rundll32.exe shell32.dll, Options_RunDLL 1)
+Allows the user to change the behavior and appearance of the task bar and Start Menu;
+•	Specifies whether to use Windows XP/Vista or Classic 9x/Me styles on the taskbar and start menu.
+•	Whether the taskbar should Auto-Hide.
+•	Whether to show the clock in the notification area.
+•	Allows the user to manage the tray icons.
+•	Advanced options such as whether to show Printers & Faxes in the start menu and whether to display My Documents as a menu or as a link to a new window.
+Moved to Settings App on Windows 10, but the shortcut still exists. Clicking on it goes to Settings App.
+
+User Accounts (nusrmgr.cpl)
+This allows the user to configure their account and other accounts used in the system, should they have sufficient privileges. They can change their username and password, their picture (if enabled) and their .net passport. If the current user has an administrators account they can also add, delete and modify other user accounts as well as make changes to core system settings. This panel also specifies whether the guest account should be active and whether to use the Welcome screen while Windows loads.
+
+
+Practical No : 08
+Aim :-  Demonstration of Task Manager 
+
+
+
+Solution :- 
+Windows Task Manager enables you to monitor the applications, processes, and services currently running on your PC. You can use Task Manager to start and stop programs and to stop processes, but in addition Task Manager will show you informative statistics about your computer’s performance and about your network.
+Open Task Manager using any of the following methods:
+• Press Ctrl-Shift-Esc.
+• Right-click an empty area of the taskbar, and then click Task Manager.
+• Press Ctrl-Alt-Delete, and then click Task Manager.
+Here’s a rundown of each tab in Task Manager.
+Applications
+ 
+You’ll see a list of the programs (“tasks”) currently running on your machine. Applications that run minimized in the System Tray (such as antivirus software) won’t show up on this list. Use this tab to exit programs that have frozen and can no longer be closed normally.
+1. If you want to exit a program, select the program and click the End Task button. This feature is useful when you have an open program that is no longer responding to input commands. Task Manager can help you exit such programs, but you may lose unsaved information when you use this method.
+2. To bring up an open program, select the program and click Switch To. The program will pop to the front.
+3. To launch a new program, click New Task… Then type your command or click Browse to locate the application. This function works in the same way as Run does in the Start menu.
+Processes
+ 
+Here you’ll find a list of processes (instances of programs) running. Ending a process will cause you to lose unsaved data. However, ending the process of a nonresponsive application is sometimes the only way you can shut it down. Make sure that you understand the purpose of the process you want to end; terminating system processes may cause a system malfunction.
+1. To end the process of a currently running application, right-click the application’s entry in the Applications tab and click Go To Process. The applicable process will be highlighted in the Processes tab.
+2. To end a highlighted process, click End Process. You’ll want to terminate an application in this manner when clicking End Task in the Applications tab doesn’t work.
+3. Right-click a process and then click End Process Tree to end the process and all associated processes.
+Services
+ 
+Services are support programs that run in the background. Most will automatically start when your computer starts.
+1. To start a service, right-click a stopped service and click Start Service.
+2. To stop a service, right-click a running service and click Stop Service.
+3. To view the process associated with a service, right-click a running service and click Go To Process. Doing this allows you to find out whether a service is hogging resources.
+Performance
+ 
+This tab displays a live feed of several areas of system performance.
+1. At the top you’ll find a CPU usage meter and a CPU usage history line graph. Multiple graphs indicate multiple CPU cores.
+2. Below the CPU usage meter and CPU usage history line graph, you’ll see a similar meter and graph for physical memory usage.
+3. At the bottom are various statistics on the number of handles, threads, and processes running as well as on memory usage.
+Networking
+ 
+The Networking tab is dominated by dynamic line graphs representing network utilization. Below the graphs you’ll see supplementary statistics.
+Users
+ 
+In the Users tab, you’ll find a list of all users who have an active session on the system.
+1. Highlight a user and click Logoff to end that user’s session.
+2. Highlight a user and click Disconnect to end a user’s session but preserve it in memory, so that user can later log on again and continue his or her work.
+Tips
+The number of running processes, CPU usage, and physical memory available are always listed at the bottom of Task Manager. These vital statistics will show you whether your PC is working hard or hardly working. If the numbers are high, you can take several troubleshooting steps.
+1. Check the Applications tab for unresponsive programs.
+2. Check the Processes tab for the process(es) consuming your resources. Remember to research any processes you don’t recognize before terminating them.
+Use the View menu to customize the columns you see in the Processes tab. The View menu also gives you access to more options for other tabs.
+
+
+Practical No : 09
+Aim :-  Demonstration of computer manage tool 
+
+
+
+Solution :- 
+The Computer Management app is included in all modern versions of Windows, and it acts like a control panel for many advanced administration tools: Task Scheduler, Event Viewer, Performance Monitor, Device Manager, Disk Management, Services and Applications, and more. We like using it for troubleshooting and system administration tasks because it offers easy access to so many tools. In this tutorial, we show all the methods we know for opening the Computer Management tool in Windows 10, Windows 7 and Windows 8.1:
+1. Use search (all Windows versions)
+One of the easiest ways is to use the search. In Windows 10, enter the words "computer management" in the search field on the taskbar and then click or tap the search result with the same name.
+  
+Computer Management, Windows
+Also in Windows 7, the fastest way to launch Computer Management is to use the search box from the Start Menu. Enter the words "computer management" and then click the appropriate search result.
+  
+Computer Management, Windows
+In Windows 8.1, you can use search by switching to the Start screen and then starting to type "computer management." Once the search results are shown, click or tap "Administrative Tools," and then open Computer Management.
+  
+Computer Management, Windows
+2. Use the Control Panel (all Windows versions)
+Another way to open Computer Management in all Windows versions involves using the Control Panel. Open Control Panel, go to "System and Security" and then click or tap "Administrative Tools."
+  
+Computer Management, Windows
+A list of administrative tools is shown. Double-click or double-tap Computer Management.
+  
+Computer Management, Windows
+3. Use the Start Menu to find Computer Management (Windows 10 only)
+In Windows 10, there is also a Computer Management shortcut in the Start Menu. To use it, click or tap Start, and scroll down the list of apps to those that start with the letter W. There, open the Windows Administrative Tools folder, and click or tap Computer Management.
+  
+Computer Management, Windows
+Unfortunately, older Windows versions do not include a similar shortcut.
+
+4. Use the Run window (all Windows versions)
+The Run window is another quick method to open system tools in Windows. You can also use it to open Computer Management. Press the Win + R keys on your keyboard to open Run, enter the command compmgmt.msc, and then press Enter or OK.
+  
+Computer Management, Windows
+5. Use Task Manager (all Windows versions)
+The Task Manager can also be used for launching the Computer Management tool. First press the Ctrl + Shift + Esc keys to open Task Manager. If you are doing this on a Windows 10 or Windows 8.1 PC, and the Task Manager opens up in its compact mode, click or tap "More details." Then, open the File menu, go to "Run new task," and type the command compmgmt.msc. Finally, press Enter on your keyboard or the OK button.
+  
+Computer Management, Windows
