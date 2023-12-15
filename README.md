@@ -1,2 +1,2 @@
 ### https://bit.ly/bcaprac
-## Chat GPT Email Indiaisgreat @ 1950
+## Chat GPT Email Indiaisgreat@1950
