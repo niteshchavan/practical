@@ -1,0 +1,4 @@
+This is tmp.txt text 
+
+Hi!
+Welcome to PHP

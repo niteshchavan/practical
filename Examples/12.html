@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MySQL Tables</title>
+</head>
+<body>
+
+  <?php
+  mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+  $mysqli = new mysqli("localhost", "root", "root@123", "stocks");
+
+  $result = $mysqli->query("SELECT Symbol_id, Date, Open_Price, High_Price, Low_Price, Close_Price FROM hdfcbank LIMIT 10;");
+
+  if ($result->num_rows > 0) {
+    echo "<table>";
+    echo "<tr> <th>Symbol ID</th>
+          <th>Date</th>
+          <th>Open Price</th>
+          <th>High Price</th>
+          <th>Low Price</th>
+          <th>Close Price</th>
+        </tr>";
+
+    while ($row = $result->fetch_assoc()) {
+      echo "<tr>";
+      echo "<td>" . $row['Symbol_id'] . ",</td>"; // Print Symbol_id with comma
+      echo "<td>" . $row['Date'] . ",</td>"; // Print Date with comma
+      echo "<td>" . number_format($row['Open_Price'], 2) . ",</td>"; // Format Open Price (2 decimal places)
+      echo "<td>" . number_format($row['High_Price'], 2) . ",</td>"; // Format High Price (2 decimal places)
+      echo "<td>" . number_format($row['Low_Price'], 2) . ",</td>"; // Format Low Price (2 decimal places)
+      echo "<td>" . number_format($row['Close_Price'], 2) . "</td>"; // Format Close Price (2 decimal places)
+      echo "</tr>";
+    }
+
+    echo "</table>";
+  } else {
+    echo "No data found in the table.";
+  }
+
+  $mysqli->close();
+  ?>
+
+
+</body>
+</html>

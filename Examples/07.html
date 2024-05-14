@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>Registration Form</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form action="registration_form.php" method="POST"> First name:
+
+        <input type="text" name="firstname"> <br> Last name:
+
+        <input type="text" name="lastname"> 
+
+        <input type="hidden" name="form_submitted" value="1" />
+
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>
+
+<br>
+<textarea rows="20" cols="100" style="font-size: 18px;">
+<html>
+<head>
+	<title>Registration Form</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+    <form action="registration_form.php" method="POST"> First name:
+
+        <input type="text" name="firstname"> <br> Last name:
+
+        <input type="text" name="lastname"> 
+
+        <input type="hidden" name="form_submitted" value="1" />
+
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>
+
+registration_form.php
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration Form</title>
+	</head>
+	<body>
+		< ?php
+		// Check if the form has been submitted
+		if(isset($_POST['form_submitted']) && $_POST['form_submitted'] == 1) {
+		    // Process the form data
+		    $firstname = $_POST['firstname'];
+		    $lastname = $_POST['lastname'];
+
+			// Display a message confirming successful submission
+			echo "<p>Thank you for registering, $firstname $lastname!</p>";
+		}
+		?>
+	</body>
+</html>
+
+
+</textarea>
